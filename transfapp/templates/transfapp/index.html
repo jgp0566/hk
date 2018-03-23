@@ -19,10 +19,13 @@
         </thead>
         <tbody>
         {% for korean in koreans %}
-        <tr>
-            <td> {{ korean.textidx }} </td>
-            <td> {{ korean.textko }} </td>
-        </tr>
+        {% if korean.textidx >= 5137 %}
+                                   
+          <tr>
+              <td> {{ korean.textidx }} </td>
+              <td> {{ korean.textko }} </td>
+          </tr>
+        {% endif %}
         {% endfor %}
         <tbody>
     </table>
